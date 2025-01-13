@@ -6,17 +6,20 @@ const Header = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="bg-blue-600 text-white shadow-md">
+    <header className="bg-yellow-600 text-white shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-2xl font-bold">Recipeeyo</div>
+        <div className="text-3xl font-bold flex items-center">
+          <span className="mr-2 text-4xl">🍽️</span>
+          Recipeeyo
+        </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6">
-          <a href="#home" className="hover:text-gray-300">Home</a>
-          <a href="#about" className="hover:text-gray-300">About</a>
-          <a href="#services" className="hover:text-gray-300">Services</a>
-          <a href="#contact" className="hover:text-gray-300">Contact</a>
+        <nav className="hidden md:flex space-x-8">
+          <a href="#home" className="hover:text-gray-200">Home</a>
+          <a href="#about" className="hover:text-gray-200">About</a>
+          <a href="#recipes" className="hover:text-gray-200">Recipes</a>
+          <a href="#contact" className="hover:text-gray-200">Contact</a>
         </nav>
 
         {/* Mobile Hamburger Icon */}
@@ -42,11 +45,11 @@ const Header = () => {
 
       {/* Mobile Navigation Menu */}
       {isOpen && (
-        <nav className="md:hidden bg-blue-600 text-white space-y-4 px-6 py-4">
-          <a href="#home" className="block hover:text-gray-300">Home</a>
-          <a href="#about" className="block hover:text-gray-300">About</a>
-          <a href="#services" className="block hover:text-gray-300">Services</a>
-          <a href="#contact" className="block hover:text-gray-300">Contact</a>
+        <nav className="md:hidden bg-yellow-600 text-white space-y-4 px-6 py-4">
+          <a href="#home" className="block hover:text-gray-200">Home</a>
+          <a href="#about" className="block hover:text-gray-200">About</a>
+          <a href="#recipes" className="block hover:text-gray-200">Recipes</a>
+          <a href="#contact" className="block hover:text-gray-200">Contact</a>
         </nav>
       )}
     </header>
