@@ -6,7 +6,7 @@ const Header = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="bg-yellow-600 text-white shadow-md">
+    <header className="bg-yellow-600 text-white shadow-md top-0">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="text-3xl font-bold flex items-center">
