@@ -9,7 +9,7 @@ function Carousl() {
   return (
     <div className="w-full h-full relative">
       <Carousel 
-        autoPlay 
+        autoPlay
         infiniteLoop 
         showThumbs={false} 
         showStatus={false}
@@ -17,21 +17,21 @@ function Carousl() {
         transitionTime={500} 
         emulateTouch
       >
-        <div className="relative">
+        <div className="relative h-[550px]">
           <img src={Image2} alt="Delicious food" className="w-full h-auto object-cover" />
           <div className="absolute inset-0 bg-black opacity-40"></div>  {/* Overlay */}
           <h2 className="absolute inset-0 text-white text-3xl font-extrabold flex justify-center items-center text-center">
             Indulge in the Best Flavors
           </h2>
         </div>
-        <div className="relative">
+        <div className="relative h-[550px]">
           <img src={Image3} alt="Delicious food" className="w-full h-auto object-cover" />
           <div className="absolute inset-0 bg-black opacity-40"></div>  {/* Overlay */}
           <h2 className="absolute inset-0 text-white text-3xl font-extrabold flex justify-center items-center text-center">
             A Taste of Perfection
           </h2>
         </div>
-        <div className="relative">
+        <div className="relative h-[550px]">
           <img src={Image1} alt="Delicious food" className="w-full h-auto object-cover" />
           <div className="absolute inset-0 bg-black opacity-40"></div>  {/* Overlay */}
           <h2 className="absolute inset-0 text-white text-3xl font-extrabold flex justify-center items-center text-center">

@@ -6,7 +6,7 @@ const Header = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="bg-yellow-600 text-white shadow-md top-0">
+    <header className="bg-amber-500 text-white shadow-md top-0" style={{ position: 'sticky', top: 0, zIndex: 100 }}>
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="text-3xl font-bold flex items-center">
@@ -17,7 +17,7 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
           <a href="#home" className="hover:text-gray-200">Home</a>
-          <a href="#about" className="hover:text-gray-200">About</a>
+          <a href="#about" className="hover:text-gray-200">Menu</a>
           <a href="#recipes" className="hover:text-gray-200">Recipes</a>
           <a href="#contact" className="hover:text-gray-200">Contact</a>
         </nav>
