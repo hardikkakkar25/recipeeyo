@@ -4,10 +4,9 @@ const Card = ({image, title, description,id}) => {
 
     const [recipieData,setRecipieData] = useState([]);
     useEffect(() => {
-        const recipies = fetch("https://dummyjson.com/recipes?limit=30")
+       fetch("https://dummyjson.com/recipes?limit=30")
           .then((res) => res.json())
           .then((data) => {
-            console.log(data.recipes);
             setRecipieData(
               data.recipes.filter((recipie) => {
                 if(recipie.id == id) {

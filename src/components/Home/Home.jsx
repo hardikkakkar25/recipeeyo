@@ -7,10 +7,8 @@ import Recipies from '../Recipies/Recipies'
 const Home = () => {
   return (
     <>
-        <Header/>
-        {/* <Carousl/>
-        <Services/> */}
-        <Recipies/>
+        <Carousl/>
+        <Services/>
     </>
   )
 }

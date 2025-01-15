@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,10 +17,10 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          <a href="#home" className="hover:text-gray-200">Home</a>
-          <a href="#about" className="hover:text-gray-200">Menu</a>
-          <a href="#recipes" className="hover:text-gray-200">Recipes</a>
-          <a href="#contact" className="hover:text-gray-200">Contact</a>
+          <Link to="/" className="hover:text-gray-200">Home</Link>
+          <Link to="/menu" className="hover:text-gray-200">Menu</Link>
+          <Link to="/recipes" className="hover:text-gray-200">Recipes</Link>
+          <Link to="#contact" className="hover:text-gray-200">Contact</Link>
         </nav>
 
         {/* Mobile Hamburger Icon */}
