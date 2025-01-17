@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 const Card = ({image, title, description,id}) => {
 
     const [recipieData,setRecipieData] = useState([]);
+    var navigator = useNavigate();
     useEffect(() => {
        fetch("https://dummyjson.com/recipes?limit=30")
           .then((res) => res.json())
@@ -20,10 +23,9 @@ const Card = ({image, title, description,id}) => {
         
       }, []);
     const navigateToRecipie = () => {
-            
-        console.log(recipieData);
-        
-    }
+      navigator(`/recipes/${id}`, { state: recipieData });
+      console.log(recipieData);
+    };
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
       {/* Image */}
