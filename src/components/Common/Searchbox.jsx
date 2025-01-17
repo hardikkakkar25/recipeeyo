@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Searchbox = () => {
+const Searchbox = (props) => {
   return (
     <div className="absolute right-24 transform -translate-y-1/2 w-[300px]">
       <div className="relative">
@@ -8,6 +8,7 @@ const Searchbox = () => {
           type="text"
           placeholder="Search..."
           className="w-full p-3 pl-10 pr-4 rounded-lg bg-gray-50 text-gray-700 placeholder-gray-400 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-400 transition duration-300 ease-in-out shadow-md hover:shadow-lg"
+          onChange={(e) => props.setQuery(e.target.value)}
         />
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -21,7 +21,7 @@ const Recipies = () => {
   }, []);
 
   const isBaseRoute = location.pathname === "/recipes";
-
+  const [query, setQuery] = useState("");
   return (
     <>
       {isBaseRoute && (
@@ -31,7 +31,7 @@ const Recipies = () => {
             <h1 className="text-center text-5xl font-extrabold my-12 text-amber-500">
               Recipes
             </h1>
-            <Searchbox />
+            <Searchbox query={query} setQuery={setQuery} />
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-36 px-12">
               {isLoading ? (
                 <Loader />
@@ -44,7 +44,14 @@ const Recipies = () => {
                     key={recipie.id}
                     id={recipie.id}
                   />
-                ))
+                )).filter((recipie) => {
+                  if (
+                    recipie.props.title.toLowerCase().includes(query.toLowerCase()) ||
+                    recipie.props.description.toLowerCase().includes(query.toLowerCase())
+                  ) {
+                    return true;
+                  } else return false;
+                })
               )}
             </div>
           </div>
